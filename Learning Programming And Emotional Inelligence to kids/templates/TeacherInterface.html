@@ -1,0 +1,223 @@
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TeacherInterface</title>
+  <link rel="icon" href="data:,">
+  <script src="./static/js/blockly_compressed.js"></script>
+  <script src="./static/js/blocks_compressed.js"></script>
+  <script src="./static/js/msg/js/en.js"></script>
+  <script src="./static/js/dart_compressed.js"></script>
+  <script src="./static/js/javascript_compressed.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ 
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+
+
+	<style>
+body {
+  font-family: Arial;
+  color: white;
+}
+canvas{
+			background: white;
+			border: 5px solid black;
+			width:600px;
+			padding-top: 90px
+			height:600px
+		}
+
+.split {
+  height: 70%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 40px;
+}
+
+.left {
+  left: 0;
+  padding-right: 20px;
+  <!-- background-color: #111; -->
+}
+
+.right {
+  right: 0;
+  <!-- padding-right: 20px; -->
+  <!-- background-color: red; -->
+}
+
+
+.btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+
+</style>
+  
+</head>
+<body>
+  <p id="call"></p>
+
+  <button id="dartButton">Dart</button>
+  <button id="javascriptButton">Javascript</button>
+  <button id="runButton"  style="background-color: red;">Run</button>
+<!-- <img src="{{url_for('static', filename='stop.png')}}" -->
+
+ 
+   <!-- <form  action="http://127.0.0.1:5000/cozmo_program" method="post"> -->
+  <!-- <button id="Button" type="submit" style="background-color: red;">Cozmo</button> -->
+   <!-- </form> -->
+  <!-- split the screen -->
+  <!-- <div class="split left"> -->
+     
+  <!-- </div> -->
+   <div  id="blocklyDiv" style="width:50%;height:50%" ></div>
+   <div class ="split right">
+    
+     <div>
+<br>
+	  <canvas id="CanvasForTeacher" style="background: #fff;magrin-left:30px;"></canvas>
+	
+	  <script src="{{ url_for('static', filename='js/MazeforTeacherInterface.js') }}"></script>
+	
+	  
+     </div>
+	 
+	
+	   <!-- <button id="1" onClick="reply_click(this.id)">B1</button> -->
+  </div>
+
+  <xml id="toolbox" style="display: none; background-color:black">
+      <category name="Motion" colour="270">
+           <block type="base_delay_example"></block>
+		   <block type="move_TeacherUp"></block>
+	       <block type="move_TeacherRight"></block>
+		   <block type="move_TeacherLeft"></block>
+		   <block type="move_TeacherDown"></block>
+		  
+      </category>
+      <category name="Logic" colour="210">
+			<!-- <block type="logic_boolean"></block> -->
+			<block type="logic_compare"></block>
+		    <block type="logic_boolean"></block>
+		    <!-- <block type="logic_boo"></block> -->
+			<!-- <block type="controls_repeat"></block> -->
+			<block type="controls_if"></block>
+		  
+	 </category>
+     <category name="Loops" colour="120">
+	       <block type="controls_whileUntil"></block>
+	 	   <block type="controls_for"></block>
+	 	   <block type="controls_repeat_ext"></block>
+     </category>
+	 <category name="Math" colour="230">
+	    <block type="math_number"></block>
+		<block type="math_arithmetic">
+	 </category>
+     <category name="Colour" colour="20">
+	     <block type="colour_blend"></block>
+		 <block type="ii_print"></block> 
+	 </category>
+	  <category name="Text" colour="20">
+	     <block type="text_print"></block>
+		 <block type="text_length"></block>
+	 </category>
+     <category name="Variables" colour="330" custom="VARIABLE"></category>
+     <category name="Functions" colour="290" custom="PROCEDURE"></category>
+
+  </xml>
+  <script>
+  
+    var blockyWorkspace = Blockly.inject('blocklyDiv',
+        {toolbox: document.getElementById('toolbox')});
+    var dartButton = document.getElementById("dartButton");
+    dartButton.addEventListener("click", function(){
+      var code = Blockly.Dart.workspaceToCode(blockyWorkspace);
+      alert(code);
+    });
+    var javascriptButton = document.getElementById("javascriptButton");
+    javascriptButton.addEventListener("click", function(){
+    var code = Blockly.JavaScript.workspaceToCode(blockyWorkspace);
+    alert(code);
+	
+	console.log(code);
+	function doWork() {
+	//ajax the JSON to the server
+	$.post("get_data",{javascript_data: code
+	});
+
+	}
+	doWork();
+	
+	  
+    });
+    var runButton = document.getElementById("runButton");
+    runButton.addEventListener("click", function(){
+      var code = Blockly.JavaScript.workspaceToCode(blockyWorkspace);
+     // console.log(code[0]); 
+	  //alert(code);
+      try {
+        eval(code);
+      } catch (e) {
+      // alert(JSON.stringify(e));
+      }
+    });
+
+    function get_columns(){
+	var col;
+	var row;
+	var hurdlecolpos,hurdlerowpos,imagecollist,imagelist,imagerowlist;
+	col={{listdata|tojson}}['columns'];
+	row={{listdata|tojson}}['rows'];
+	hurdlerowpos={{listdata|tojson}}['hurdlerowposition'];
+	hurdlecolpos={{listdata|tojson}}['hurdlecolposition'];
+	imagelist={{listdata|tojson}}['imagelist'];
+	imagerowList={{listdata|tojson}}['imagerowlist'];
+	imagecolList={{listdata|tojson}}['imagecollist'];
+	console.log(imagecollist);
+	
+	<!-- console.log(colpos); -->
+	getcol(col,row,hurdlerowpos,hurdlecolpos,imagelist,imagerowList,imagecolList);	
+	
+	};
+   get_columns();
+   // document.getElementById("call").innerHTML = get_columns();
+  
+  </script>
+  <br>
+  <b><a href="http://127.0.0.1:5000/">Back To HomePage</a></b>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>HomePage</title>
+  <link rel="icon" href="data:,">
+  <script src="./static/js/blockly_compressed.js"></script>
+  <script src="./static/js/blocks_compressed.js"></script>
+  <script src="./static/js/msg/js/en.js"></script>
+  <script src="./static/js/dart_compressed.js"></script>
+  <script src="./static/js/javascript_compressed.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+
+<style>
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.circular--square {
+  border-radius: 50%;
+}
+
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+</style>
+  
+</head>
+<body style="background-color:grey;">
+
+<center><h1 style="font-family:verdana;  padding: 1em; background-color: #005544;color: white;" align="center">Learning Programming And Emotional Intelligence To kids </h1></center>
+<br> 
+  <p id="call"></p>
+<div class="row">
+  <div class="column">
+  <a href="http://127.0.0.1:5000/StageOne">
+
+    <img src="/static/images/background.jpg" id="1" class="circular--square" alt="Snow" style="width:80%; border:5px solid black; height:30%;;margin-left: 50px">
+	</a>
+	<br>
+	<center><h2>Stage One</h2></center>
+  </div>
+  <div class="column">
+  <a href="http://127.0.0.1:5000/StageTwo">
+    <img src="/static/images/images.jpg" class="circular--square" alt="Forest" style="width:85%; border:5px solid black;height:30%">
+	</a>
+	<br>
+	<center><h2>Stage Two</h2></center>
+  </div>
+  <div class="column">
+  <a href="http://127.0.0.1:5000/StageThree">
+    <img src="/static/images/hospitall.jpg" class="circular--square" alt="Mountains" style="width:80%; border:5px solid black ; height:30%">
+	</a>
+	<br>
+	<center><h2>Stage Three</h2></center>
+  </div>
+</div>
+<br>
+<br>
+<!-- second row -->
+<div class="row">
+  <div class="column">
+
+  
+  {% if data==1 %}
+  <a href="http://127.0.0.1:5000/StageFour">
+
+    <img src="/static/images/bott.jpg" class="circular--square" alt="Snow" style="width:80%;filter: brightness(50%); border:5px solid black; height:30%;;margin-left: 50px">
+	</a>
+	{%else%}
+	<a href="http://127.0.0.1:5000/StageFour">
+
+    <img src="/static/images/bott.jpg" class="circular--square" alt="Snow" style="width:80%; border:5px solid black; height:30%;;margin-left: 50px">
+	</a>
+	{% endif %}
+	<br>
+	<center><h2>Stage Four</h2></center>
+  </div>
+  <div class="column">
+  <a href="http://127.0.0.1:5000/StageFive">
+    <img src="/static/images/a.jpeg" class="circular--square" alt="Forest" style="width:85%; border:5px solid black;height:30%">
+	</a>
+	<br>
+	<center><h2>Stage Five</h2></center>
+  </div>
+  <div class="column">
+  <a href="http://127.0.0.1:5000/StageSix">
+    <img src="/static/images/10.jpg" class="circular--square" alt="Mountains" style="width:80%; border:5px solid black ; height:30%">
+	</a>
+	<br>
+	<center><h2>Stage Six</h2></center>
+  </div>
+</div>
+
+<br>
+<br>
+<!-- 3rd row -->
+<div class="row">
+  <div class="column">
+  <a href="http://127.0.0.1:5000/StageSeven">
+
+    <img src="/static/images/work.jpeg" class="circular--square" alt="Snow" style="width:80%; border:5px solid black; height:30%;;margin-left: 50px">
+	</a>
+	<br>
+	<center><h2>Stage Seven</h2></center>
+  </div>
+  <div class="column">
+  <a href="http://127.0.0.1:5000/StageEight">
+    <img src="/static/images/grapes.png" class="circular--square" alt="Forest" style="width:85%; border:5px solid black;height:30%">
+	</a>
+	<br>
+	<center><h2>Stage Eight</h2></center>
+  </div>
+  <div class="column">
+  <a href="http://127.0.0.1:5000/StageNine">
+    <img src="/static/images/close_background.jpg" class="circular--square" alt="Mountains" style="width:80%; border:5px solid black ; height:30%">
+	</a>
+	<br>
+	<center><h2>Stage Nine</h2></center>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+  <a href="http://127.0.0.1:5000/StageTen">
+
+    <img src="/static/images/stage10.jpg" class="circular--square" alt="Snow" style="width:80%; border:5px solid black; height:30%;;margin-left: 50px">
+	</a>
+	<br>
+	<center><h2>Stage Ten</h2></center>
+  </div>
+ 
+</div>
+<!-- <script> -->
+  <!-- function getstage() -->
+  <!-- { -->
+      <!-- var no; -->
+	  <!-- no={{data}}; -->
+	  <!-- if(no==null){ -->
+	  <!-- no=0;} -->
+	  <!-- console.log(no);	  -->
+  
+ 
+  <!-- } -->
+  <!-- <!-- document.getElementById("call").innerHTML = getstage();  --> -->
+<!-- </script> -->
+<!-- <div id="1"> -->
+<!-- <a href="http://127.0.0.1:5000/flask_function"> -->
+<!-- <img src="/static/images/candey.jpg"  width="100"  height="150" /></div>  -->
+<!-- </a> -->
+<!-- <!-- <img src="C:/FYP/cozmo/AJAX_Forms_jQuery_Flask-master/static/images/stop.png"  width="50"  height="50" /></div>  --> 
+<!-- </div>  -->
+</body>
+</html>
